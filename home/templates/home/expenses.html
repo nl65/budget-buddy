@@ -1,0 +1,15 @@
+<h1>Expenses</h1>
+
+{% if expenses %}
+    <ul>
+    {% for expense in expenses %}
+        <li>
+            <a href="/home/expenses/">{{ expense.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No expenses entered.</p>
+{% endif %}
+<a href="/home/incomes/">See incomes</a>
+<a href="/home/">Back to index</a>
